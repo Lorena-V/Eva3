@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/static/css/estilos1.css">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <div class="container nombres">
+        <form action="/ejercicio2" method="POST">
+            <label for="nombre1">Nombre 1:</label>
+            <input type="text" id="nombre1" name="nombre1" required >
+
+            <label for="nombre2">Nombre 2:</label>
+            <input type="text" id="nombre2" name="nombre2" required >
+
+            <label for="nombre3">Nombre 3:</label>
+            <input type="text" id="nombre3" name="nombre3" required >
+
+            <button type="submit">Enviar</button>
+        </form>
+        <table class="nombres">
+            {% if maximo %}
+            <tr>
+                <td>El nombre con mayor cantidad de caracteres es: {{maximo}}</td>
+            </tr>
+            <tr>
+                <td>El nombre tiene: {{maximoC}} caracteres.</td>
+            </tr>
+        </table>
+        {% endif %}
+
+        <button><a href="/" class="button">Vovler</a></button>
+
+    </div>
+</body>
+</html>
